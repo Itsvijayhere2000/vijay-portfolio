@@ -1,6 +1,6 @@
 # Vijay Rajan — Portfolio
 
-Personal portfolio built with plain HTML5, CSS3 and vanilla JavaScript. No framework, no build step, no npm.
+Personal portfolio built with plain HTML5, CSS3 and vanilla JavaScript. No framework, no build step, no npm,no packages.
 
 ## Run
 

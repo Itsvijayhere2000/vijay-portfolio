@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vijay Rajan | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Vijay Rajan, a Full Stack Developer with 4+ years of experience working with Angular, NestJS, Node.js and PostgreSQL.">
+  <meta name="author" content="Vijay Rajan">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Vijay Rajan">
+  <meta property="og:title" content="Vijay Rajan | Full Stack Developer">
+  <meta property="og:description" content="Portfolio of Vijay Rajan, a Full Stack Developer with 4+ years of experience working with Angular, NestJS, Node.js and PostgreSQL.">
+  <!-- Once the site is hosted, add og:url and og:image (1200x630, placed in assets/images/) here. -->
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon sprite: referenced with <use href="#icon-..."> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Zm.5.5 8.5 6.5L20.5 7"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/>
+    </symbol>
+    <symbol id="icon-up" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6 6-6 6 6"/>
+    </symbol>
+  </svg>
+
+  <!-- ===== Navbar ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__brand" href="#home">Vijay Rajan</a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#experience">Experience</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">4+ years experience</p>
+          <h1 id="hero-title" class="hero__title">
+            Vijay Rajan
+            <span class="hero__role">Full Stack Developer</span>
+          </h1>
+          <p class="hero__stack">Angular <span aria-hidden="true">&bull;</span> NestJS <span aria-hidden="true">&bull;</span> PostgreSQL</p>
+          <p class="hero__lead">Building modern web applications across frontend, backend and database layers.</p>
+          <p class="hero__statement">I work on enterprise applications at Finstein, from Angular interfaces to NestJS and Node.js services backed by PostgreSQL.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">
+              View Projects
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg>
+            </a>
+            <!-- Placeholder resume: replace assets/resume/Vijay-Rajan-Resume.pdf with the final file. -->
+            <a class="btn btn--ghost" href="assets/resume/Vijay-Rajan-Resume.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg>
+              Download Resume
+            </a>
+          </div>
+
+          <ul class="social" aria-label="Social links">
+            <li><a class="social__link" href="https://github.com/Itsvijayhere2000" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a></li>
+            <li><a class="social__link" href="https://www.linkedin.com/in/vijay-rajan-fsdev1909/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg></a></li>
+            <li><a class="social__link" href="mailto:vijaykrdsm@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+        <img class="hero__photo" src="assets/images/profile.jpg" alt="Portrait of Vijay Rajan" width="480" height="480">
+
+        <div class="terminal" role="img" aria-label="Terminal window. Command: whoami. Output: Vijay Rajan, Full Stack Developer. Stack: Angular, NestJS, PostgreSQL. Focus: Enterprise Applications, Backend Development, Performance Testing, AI-Assisted Development.">
+          <div class="terminal__bar" aria-hidden="true">
+            <span class="terminal__dot"></span>
+            <span class="terminal__dot"></span>
+            <span class="terminal__dot"></span>
+            <span class="terminal__title">whoami</span>
+          </div>
+          <div class="terminal__body" aria-hidden="true">
+            <p class="terminal__line"><span class="terminal__prompt">$</span> <span data-typed>whoami</span></p>
+            <p class="terminal__line terminal__line--strong"><span data-typed>Vijay Rajan</span></p>
+            <p class="terminal__line terminal__line--gap"><span data-typed>Full Stack Developer</span></p>
+            <p class="terminal__line"><span class="terminal__prompt">$</span> <span data-typed>stack</span></p>
+            <p class="terminal__line terminal__line--gap"><span data-typed>Angular &middot; NestJS &middot; PostgreSQL</span></p>
+            <p class="terminal__line"><span class="terminal__prompt">$</span> <span data-typed>focus</span></p>
+            <p class="terminal__line"><span class="terminal__prompt">&gt;</span> <span data-typed>Enterprise Applications</span></p>
+            <p class="terminal__line"><span class="terminal__prompt">&gt;</span> <span data-typed>Backend Development</span></p>
+            <p class="terminal__line"><span class="terminal__prompt">&gt;</span> <span data-typed>Performance Testing</span></p>
+            <p class="terminal__line"><span class="terminal__prompt">&gt;</span> <span data-typed>AI-Assisted Development</span><span class="terminal__cursor"></span></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">01 / about</p>
+          <h2 id="about-title" class="section__title">About Me</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text" data-reveal>
+            <p>I'm a Full Stack Developer with 4+ years of experience building web applications with Angular, NestJS, Node.js and PostgreSQL.</p>
+            <p>My work covers enterprise application development, complex business workflows, backend services, database-driven applications and performance testing.</p>
+          </div>
+
+          <dl class="stats">
+            <div class="stat" data-reveal>
+              <dt class="stat__label">Years Experience</dt>
+              <dd class="stat__value">4+</dd>
+            </div>
+            <div class="stat" data-reveal>
+              <dt class="stat__label">Enterprise Modules</dt>
+              <dd class="stat__value">Multiple</dd>
+            </div>
+            <div class="stat" data-reveal>
+              <dt class="stat__label">Hackathons</dt>
+              <dd class="stat__value">2</dd>
+            </div>
+            <div class="stat" data-reveal>
+              <dt class="stat__label">Hackathon Winner</dt>
+              <dd class="stat__value">1</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">02 / experience</p>
+          <h2 id="experience-title" class="section__title">Experience</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__meta">July 2022 &ndash; Present</p>
+            <h3 class="timeline__title">Full Stack Developer</h3>
+            <p class="timeline__company">Finstein</p>
+            <p>Working across frontend and backend development using Angular, Node.js and NestJS.</p>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__meta">Key project</p>
+            <h3 class="timeline__title">Enterprise Banking Application</h3>
+            <p class="timeline__company">Finstein</p>
+            <p>Angular frontend development on a large-scale enterprise banking application: enterprise UI and complex banking workflows across multiple modules, built with PrimeNG and NgRx.</p>
+            <ul class="tags" aria-label="Banking modules and workflows">
+              <li class="tag">Deposit</li>
+              <li class="tag">Jewel</li>
+              <li class="tag">Locker</li>
+              <li class="tag">Payroll</li>
+              <li class="tag">Master Data</li>
+              <li class="tag">Employee / HR workflows</li>
+              <li class="tag">Employee Suspend</li>
+              <li class="tag">Terminate</li>
+              <li class="tag">Printing workflows</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item" data-reveal>
+            <p class="timeline__meta">Key project</p>
+            <h3 class="timeline__title">Event Management System</h3>
+            <p>An event platform with an admin web app and an attendee mobile app. Admins create events and generate QR codes; attendees scan the code to join the event.</p>
+          </li>
+        </ol>
+
+        <div class="card extra" data-reveal>
+          <h3 class="card__title">Additional Engineering Experience</h3>
+          <ul class="checklist">
+            <li>Performance testing using Gatling</li>
+            <li>API and backend development using NestJS</li>
+            <li>PostgreSQL database work</li>
+            <li>Redis and cache concepts</li>
+            <li>Deployment using Linux and Nginx</li>
+            <li>Git and GitLab workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section section--alt" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">03 / skills</p>
+          <h2 id="skills-title" class="section__title">Skills</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skills__row" data-reveal>
+            <h3 class="skills__label">Frontend</h3>
+            <ul class="tags">
+              <li class="tag">Angular</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">HTML5</li>
+              <li class="tag">CSS3</li>
+              <li class="tag">PrimeNG</li>
+              <li class="tag">NgRx</li>
+            </ul>
+          </div>
+
+          <div class="skills__row" data-reveal>
+            <h3 class="skills__label">Backend</h3>
+            <ul class="tags">
+              <li class="tag">Node.js</li>
+              <li class="tag">NestJS</li>
+              <li class="tag">REST APIs</li>
+              <li class="tag">TypeORM</li>
+            </ul>
+          </div>
+
+          <div class="skills__row" data-reveal>
+            <h3 class="skills__label">Database</h3>
+            <ul class="tags">
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">MySQL</li>
+              <li class="tag">MS SQL</li>
+            </ul>
+          </div>
+
+          <div class="skills__row" data-reveal>
+            <h3 class="skills__label">Performance</h3>
+            <ul class="tags">
+              <li class="tag">Gatling</li>
+              <li class="tag">Load Testing</li>
+              <li class="tag">Performance Testing</li>
+            </ul>
+          </div>
+
+          <div class="skills__row" data-reveal>
+            <h3 class="skills__label">Infrastructure / Tools</h3>
+            <ul class="tags">
+              <li class="tag">Redis</li>
+              <li class="tag">Firebase</li>
+              <li class="tag">Git</li>
+              <li class="tag">GitLab</li>
+              <li class="tag">Linux</li>
+              <li class="tag">Nginx</li>
+              <li class="tag">AWS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">04 / projects</p>
+          <h2 id="projects-title" class="section__title">Projects</h2>
+        </header>
+
+        <div class="grid grid--2">
+          <article class="card project" data-reveal>
+            <p class="project__highlight">Enterprise frontend engineering</p>
+            <h3 class="card__title">Enterprise Banking Application</h3>
+            <p>A large-scale enterprise banking application involving complex business workflows, transaction processing, master data and operational modules.</p>
+            <ul class="checklist checklist--compact">
+              <li>Deposit</li>
+              <li>Jewel</li>
+              <li>Locker</li>
+              <li>Payroll</li>
+              <li>Master Data</li>
+              <li>Printing</li>
+              <li>Employee Suspend</li>
+              <li>Terminate</li>
+            </ul>
+            <ul class="tags project__tech" aria-label="Technologies">
+              <li class="tag">Angular</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">PrimeNG</li>
+              <li class="tag">NgRx</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+            </ul>
+          </article>
+
+          <article class="card project" data-reveal>
+            <p class="project__highlight">Web app + mobile app</p>
+            <h3 class="card__title">Event Management System</h3>
+            <p>An event platform where admins create events and generate QR codes in a web app, and attendees join by scanning the QR code in a mobile app.</p>
+            <ul class="checklist checklist--compact">
+              <li>Event creation for admins</li>
+              <li>QR code generation</li>
+              <li>QR scan in the mobile app</li>
+              <li>Join an event by QR</li>
+            </ul>
+            <!-- [ADD TECH STACK] Add a <ul class="tags project__tech"> list here once the stack is confirmed. -->
+          </article>
+
+          <article class="card project" data-reveal>
+            <p class="project__highlight">Performance engineering</p>
+            <h3 class="card__title">Performance Testing with Gatling</h3>
+            <p>Performance testing and load testing of application and API workflows using Gatling.</p>
+            <ul class="checklist checklist--compact">
+              <li>Load testing</li>
+              <li>Concurrent users</li>
+              <li>API performance</li>
+              <li>Performance analysis</li>
+            </ul>
+            <ul class="tags project__tech" aria-label="Technologies">
+              <li class="tag">Gatling</li>
+              <li class="tag">Java / Scala / JavaScript</li>
+              <li class="tag">REST APIs</li>
+            </ul>
+          </article>
+
+          <!-- Placeholder card: replace with a real personal project. -->
+          <!-- <article class="card project project--placeholder" data-reveal>
+            <p class="project__highlight">Personal / experimental</p>
+            <h3 class="card__title">More Projects Coming Soon</h3>
+            <p>Space reserved for personal and experimental projects.</p>
+          </article> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Engineering Interests ===== -->
+    <section id="interests" class="section section--alt" aria-labelledby="interests-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">05 / interests</p>
+          <h2 id="interests-title" class="section__title">Engineering Interests</h2>
+        </header>
+
+        <div class="grid grid--4">
+          <article class="card focus" data-reveal>
+            <p class="focus__index" aria-hidden="true">01</p>
+            <h3 class="card__title">System Design</h3>
+            <p>Designing scalable and maintainable application architectures.</p>
+          </article>
+          <article class="card focus" data-reveal>
+            <p class="focus__index" aria-hidden="true">02</p>
+            <h3 class="card__title">Backend Engineering</h3>
+            <p>Building APIs, services and database-driven applications.</p>
+          </article>
+          <article class="card focus" data-reveal>
+            <p class="focus__index" aria-hidden="true">03</p>
+            <h3 class="card__title">Performance Engineering</h3>
+            <p>Understanding application behavior under load and identifying bottlenecks.</p>
+          </article>
+          <article class="card focus" data-reveal>
+            <p class="focus__index" aria-hidden="true">04</p>
+            <h3 class="card__title">Problem Solving</h3>
+            <p>Working on algorithmic and engineering problems through DSA practice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Achievements ===== -->
+    <section id="achievements" class="section" aria-labelledby="achievements-title">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow">06 / achievements</p>
+          <h2 id="achievements-title" class="section__title">Achievements</h2>
+        </header>
+
+        <div class="grid">
+          <article class="achievement" data-reveal>
+            <div>
+              <p class="achievement__figure">1st <span>Prize</span></p>
+              <h3 class="card__title">Hackathons</h3>
+              <p>Participated in 2 hackathons, building an Expense Tracker and an LMS. One of the projects won 1st prize at Codukalam 2023, Finstein's Hackathon 4.0.</p>
+              <ul class="tags">
+                <li class="tag">Expense Tracker</li>
+                <li class="tag">LMS</li>
+              </ul>
+            </div>
+            <div class="gallery">
+              <img class="gallery__item" src="assets/images/hackathon-team.jpg" alt="Winning team holding the Codukalam 2023 winner cheque at Finstein" width="1200" height="900" loading="lazy">
+              <img class="gallery__item gallery__item--top" src="assets/images/hackathon-winner.jpg" alt="Holding the Codukalam 2023 winner cheque" width="900" height="1200" loading="lazy">
+            </div>
+          </article>
+
+          <article class="achievement" data-reveal>
+            <div>
+              <p class="achievement__figure">~3 <span>Months</span></p>
+              <h3 class="card__title">Junior Onboarding &amp; Mentoring</h3>
+              <p>For about 3 months, a colleague and I supported our CTO with onboarding junior developers: coordinating sessions, clearing doubts and helping manage the onboarding batch alongside our regular work.</p>
+            </div>
+            <div class="gallery">
+              <img class="gallery__item gallery__item--wide" src="assets/images/onboarding-session.jpg" alt="Explaining a topic at the whiteboard to a room of junior developers" width="1200" height="675" loading="lazy">
+              <img class="gallery__item" src="assets/images/onboarding-group.jpg" alt="Group selfie with the onboarding batch in the training room" width="1200" height="900" loading="lazy">
+              <img class="gallery__item" src="assets/images/onboarding-team.jpg" alt="Group photo with junior developers at the office" width="1200" height="540" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact" data-reveal>
+          <p class="eyebrow">07 / contact</p>
+          <h2 id="contact-title" class="section__title">Let's Connect</h2>
+          <p class="contact__text">I'm open to interesting engineering opportunities, collaborations and discussions around software development.</p>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:vijaykrdsm@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+              Email
+            </a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/vijay-rajan-fsdev1909/" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>
+              LinkedIn
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/Itsvijayhere2000" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__name">Vijay Rajan</p>
+        <p class="site-footer__role">Full Stack Developer</p>
+        <p class="site-footer__motto">Building reliable web applications.</p>
+      </div>
+
+      <div class="site-footer__meta">
+        <ul class="social" aria-label="Social links">
+          <li><a class="social__link" href="https://github.com/Itsvijayhere2000" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a></li>
+          <li><a class="social__link" href="https://www.linkedin.com/in/vijay-rajan-fsdev1909/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg></a></li>
+          <li><a class="social__link" href="mailto:vijaykrdsm@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a></li>
+        </ul>
+        <p class="site-footer__copy">&copy; <span id="year">2026</span> Vijay Rajan</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="back-to-top" href="#home" aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="#icon-up"/></svg>
+  </a>
+</body>
+</html>

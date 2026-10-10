@@ -723,6 +723,11 @@ a {
   font-size: 1.3125rem;
 }
 
+.project__link {
+  align-self: flex-start;
+  margin-top: 1.25rem;
+}
+
 .project__tech {
   margin-top: auto;
   padding-top: 1.5rem;
